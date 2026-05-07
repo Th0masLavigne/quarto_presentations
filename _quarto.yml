@@ -1,0 +1,16 @@
+project:
+  type: website
+  output-dir: presentation_built
+
+format:
+  revealjs:
+    template-partials:
+      - resources/title-slide.html
+    css: resources/pages_style/styles.css
+    slide-number: c/t
+    transition: fade
+    width: 1600       
+    height: 900       
+    margin: 0.05
+    min-scale: 0.2
+    max-scale: 2.0

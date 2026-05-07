@@ -1,0 +1,118 @@
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+<style>
+  :root {
+    /* Base Presentation Sizing */
+    --title-size: $if(title-config.title-size)$$title-config.title-size$$else$45pt$endif$;
+    --header-size: $if(title-config.header-size)$$title-config.header-size$$else$35pt$endif$;
+    --subtitle-size: $if(title-config.subtitle-size)$$title-config.subtitle-size$$else$18pt$endif$;
+    --author-size: $if(title-config.author-size)$$title-config.author-size$$else$18pt$endif$;
+    --footer-size: $if(title-config.footer-size)$$title-config.footer-size$$else$13pt$endif$;
+    --title-image-size: $if(title-config.title-image-size)$$title-config.title-image-size$$else$400px$endif$;
+    --logo-height: $if(title-config.logo-height)$$title-config.logo-height$$else$55px$endif$;
+    --content-logo-height: $if(title-config.content-logo-height)$$title-config.content-logo-height$$else$75px$endif$;
+    --sidebar-width: $if(title-config.sidebar-width)$$title-config.sidebar-width$$else$100px$endif$;
+    
+    /* Core Identity Colors */
+    --title-color: $if(title-config.title-color)$$title-config.title-color$$else$#004D7A$endif$;
+    --card-red: $if(title-config.card-red)$$title-config.card-red$$else$#D3362A$endif$;
+    --card-blue: $if(title-config.card-blue)$$title-config.card-blue$$else$#004D7A$endif$;
+    --sidebar-color: $if(title-config.sidebar-color)$$title-config.sidebar-color$$else$#1A2E3B$endif$;
+    --orcid-color: $if(title-config.orcid-color)$$title-config.orcid-color$$else$#A6CE39$endif$;
+    
+    /* Global System Colors */
+    --text-main: $if(title-config.text-main)$$title-config.text-main$$else$#4B5563$endif$;
+    --text-muted: $if(title-config.text-muted)$$title-config.text-muted$$else$#777777$endif$;
+    --bg-light: $if(title-config.bg-light)$$title-config.bg-light$$else$#F0F4F8$endif$;
+    --bg-light-red: $if(title-config.bg-light-red)$$title-config.bg-light-red$$else$#FDF2F2$endif$;
+    --border-main: $if(title-config.border-main)$$title-config.border-main$$else$#E2E8F0$endif$;
+    --success-green: $if(title-config.success-green)$$title-config.success-green$$else$#2ecc71$endif$;
+    --error-red: $if(title-config.error-red)$$title-config.error-red$$else$#e74c3c$endif$;
+    --subtitle-accent: $if(title-config.subtitle-accent)$$title-config.subtitle-accent$$else$#A0C1D1$endif$;
+    
+    /* CV Timeline Colors */
+    --cv-date-color: $if(title-config.cv-date-color)$$title-config.cv-date-color$$else$#EFA49B$endif$;
+    --cv-line-color: $if(title-config.cv-line-color)$$title-config.cv-line-color$$else$#6B7280$endif$;
+
+    /* Global Typography Scale */
+    --fs-tiny: $if(title-config.fs-tiny)$$title-config.fs-tiny$$else$13pt$endif$;
+    --fs-footnote: $if(title-config.fs-footnote)$$title-config.fs-footnote$$else$14pt$endif$;
+    --fs-small: $if(title-config.fs-small)$$title-config.fs-small$$else$15pt$endif$;
+    --fs-p-sm: $if(title-config.fs-p-sm)$$title-config.fs-p-sm$$else$16pt$endif$;
+    --fs-base: $if(title-config.fs-base)$$title-config.fs-base$$else$18pt$endif$;
+    --fs-p-lg: $if(title-config.fs-p-lg)$$title-config.fs-p-lg$$else$20pt$endif$;
+    --fs-h6: $if(title-config.fs-h6)$$title-config.fs-h6$$else$22pt$endif$;
+    --fs-h5: $if(title-config.fs-h5)$$title-config.fs-h5$$else$24pt$endif$;
+    --fs-h4: $if(title-config.fs-h4)$$title-config.fs-h4$$else$26pt$endif$;
+    --fs-h3: $if(title-config.fs-h3)$$title-config.fs-h3$$else$28pt$endif$;
+    --fs-h2: $if(title-config.fs-h2)$$title-config.fs-h2$$else$32pt$endif$;
+    --fs-h1: $if(title-config.fs-h1)$$title-config.fs-h1$$else$34pt$endif$;
+    --fs-display-xs: $if(title-config.fs-display-xs)$$title-config.fs-display-xs$$else$36pt$endif$;
+    --fs-display-sm: $if(title-config.fs-display-sm)$$title-config.fs-display-sm$$else$40pt$endif$;
+    --fs-display-md: $if(title-config.fs-display-md)$$title-config.fs-display-md$$else$55pt$endif$;
+    --fs-display-lg: $if(title-config.fs-display-lg)$$title-config.fs-display-lg$$else$60pt$endif$;
+    --fs-display-xl: $if(title-config.fs-display-xl)$$title-config.fs-display-xl$$else$80pt$endif$;
+    --fs-display-xxl: $if(title-config.fs-display-xxl)$$title-config.fs-display-xxl$$else$110pt$endif$;
+    --fs-subtitle-silde: $if(title-config.fs-subtitle-silde)$$title-config.fs-subtitle-silde$$else$26pt$endif$;
+    /* Global Icon Scale */
+    --icon-sm: $if(title-config.icon-sm)$$title-config.icon-sm$$else$24px$endif$;
+    --icon-md: $if(title-config.icon-md)$$title-config.icon-md$$else$40px$endif$;
+    --icon-lg: $if(title-config.icon-lg)$$title-config.icon-lg$$else$60px$endif$;
+    --icon-xl: $if(title-config.icon-xl)$$title-config.icon-xl$$else$70px$endif$;
+    --icon-xxl: $if(title-config.icon-xxl)$$title-config.icon-xxl$$else$80px$endif$;
+  }
+</style>
+
+<section id="title-slide" class="quarto-title-block center" data-state="hide-ui">
+  <div class="custom-title-layout">
+    <div class="title-sidebar"></div>
+    <div class="title-main">
+      <div class="title-logos">
+        $for(logos)$
+          <img src="$logos$" class="title-logo" alt="Logo">
+        $endfor$
+      </div>
+
+      <div class="title-middle">
+        <div class="title-text-area">
+          <h1 class="title">$title$</h1>
+          $if(subtitle)$<p class="subtitle">$subtitle$</p>$endif$
+
+          <div class="author-container">
+            $for(by-author)$
+            <div class="author-card">
+              <span class="author-name $if(by-author.attributes.presenter)$presenter$endif$">$by-author.name.literal$</span>
+              <span class="author-meta">
+                $for(by-author.affiliations)$$by-author.affiliations.number$$sep$,$endfor$
+                $if(by-author.orcid)$
+                  <a href="https://orcid.org/$by-author.orcid$" target="_blank" class="orcid-link">
+                    <iconify-icon icon="academicons:orcid"></iconify-icon>
+                  </a>
+                $endif$
+              </span>
+            </div>
+            $endfor$
+          </div>
+        </div>
+
+        <div class="title-image-area">
+          <img src="$if(title-image)$$title-image$$else$https://via.placeholder.com/400x400.png$endif$" class="title-circle-img">
+        </div>
+      </div>
+
+      <div class="title-footer">
+        <div class="footer-affiliations">
+          $for(by-affiliation)$
+            <div class="affil-line"><b>$by-affiliation.number$</b>: $by-affiliation.name$</div>
+          $endfor$
+        </div>
+        <div class="footer-meta">
+          $if(custom-funding)$<div class="funding-text">$custom-funding$</div>$endif$
+          $if(email)$<div class="email-text"><iconify-icon icon="mdi:email-outline"></iconify-icon> $email$</div>$endif$
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
