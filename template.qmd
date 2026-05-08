@@ -158,7 +158,7 @@ It builds upon Quarto and [Reveal.js](https://revealjs.com) to provide a unified
 :::
 
 ::: {.toc-item}
-<iconify-icon icon="mdi:circle-outline"></iconify-icon> Part 2: Custom Components & Layouts
+<iconify-icon icon="mdi:circle-outline"></iconify-icon> Part 2: Components & Layouts
 :::
 
 ::: {.toc-item}
@@ -264,7 +264,7 @@ Comprehensive overview of template customization variables.
 :::
 
 
-# Part 2: Custom Components & Layouts
+# Part 2: Components & Layouts
 
 
 ::: {.section-toc .w-75 .h-center .mt-60}
@@ -274,7 +274,7 @@ Comprehensive overview of template customization variables.
 :::
 
 ::: {.toc-item .active}
-<iconify-icon icon="mdi:play-circle"></iconify-icon> Part 2: Custom Components & Layouts
+<iconify-icon icon="mdi:play-circle"></iconify-icon> Part 2: Components & Layouts
 :::
 
 ::: {.toc-item}
@@ -669,7 +669,7 @@ Catalog of ready-to-use macros and CSS classes (Scroll down for more).
 :::
 
 ::: {.toc-item .past}
-<iconify-icon icon="mdi:check-circle"></iconify-icon> Part 2: Custom Components & Layouts
+<iconify-icon icon="mdi:check-circle"></iconify-icon> Part 2: Components & Layouts
 :::
 
 ::: {.toc-item .active}
@@ -894,7 +894,7 @@ plotActors(actors, talentWeight, looksWeight, minimum)
 :::
 
 ::: {.toc-item .past}
-<iconify-icon icon="mdi:check-circle"></iconify-icon> Part 2: Custom Components & Layouts
+<iconify-icon icon="mdi:check-circle"></iconify-icon> Part 2: Components & Layouts
 :::
 
 ::: {.toc-item .past}
