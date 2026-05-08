@@ -27,10 +27,10 @@ title-config:
   # 2. GLOBAL COLOR PALETTE (LMS BRAND)
   # ==========================================
   # Core Brand Colors
-  title-color: "#D3362A"      # LMS Logo Red
+  title-color: "#000000"      # LMS Logo Red
   card-red: "#D3362A"         # Consistent Red
   card-blue: "#000000"        # LMS Black (Solid, Engineering feel)
-  sidebar-color: "#000000"    # Black Sidebar (Makes the LMS logo pop)
+  sidebar-color: "#D3362A"    # Black Sidebar (Makes the LMS logo pop)
   orcid-color: "#A6CE39"      # Standard ORCID green
   
   # Backgrounds

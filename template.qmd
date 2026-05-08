@@ -31,10 +31,10 @@ title-config:
   content-logo-height: "75px"    
 
   # --- Core Brand Colors ---
-  title-color: "#D3362A"         
+  title-color: "#000000"         
   card-red: "#D3362A"            
   card-blue: "#000000"           
-  sidebar-color: "#000000"       
+  sidebar-color: "#D3362A"       
   orcid-color: "#A6CE39"         
   
   # --- UI & Background Colors ---
@@ -59,16 +59,16 @@ title-config:
   fs-footnote: "14pt"         
   fs-small: "15pt"            
   fs-p-sm: "16pt"             
-  fs-base: "16pt"             
-  fs-p-lg: "24pt"             
-  fs-h6: "26pt"               
-  fs-h4: "28pt"               
-  fs-h3: "30pt"               
-  fs-h2: "34pt"               
-  fs-h5: "34pt"               
-  fs-h1: "36pt"               
-  fs-display-xs: "38pt"       
-  fs-display-sm: "42pt"       
+  fs-base: "14pt"             
+  fs-p-lg: "20pt"             
+  fs-h6: "24pt"               
+  fs-h4: "26pt"               
+  fs-h3: "28pt"               
+  fs-h2: "30pt"               
+  fs-h5: "32pt"               
+  fs-h1: "34pt"               
+  fs-display-xs: "36pt"       
+  fs-display-sm: "40pt"       
   fs-display-md: "55pt"       
   fs-display-lg: "60pt"       
   fs-display-xl: "80pt"       
@@ -147,6 +147,8 @@ Understanding the `format: revealjs` block at the top of your `.qmd` file.
 
 Before writing slides, you must configure the document. Here is what the core parameters control:
 
+::: {.text-xl}
+
 * **`logo`**: The default logo placed on every slide (except the title).
 * **`chalkboard: true`**: Activates the drawing/annotation tool overlay (when html opened, press F to slide show, c and b to annotate or board). 
 * **`css`**: Points to the custom LMS stylesheet (`styles.css`).
@@ -154,6 +156,8 @@ Before writing slides, you must configure the document. Here is what the core pa
 * **`transition: fade`**: The default animation between slides (can be `none`, `slide`, `convex`, etc.).
 * **`width` / `height`**: Locks the native resolution (1600x900 is standard 16:9).
 * **`margin`, `min-scale`, `max-scale`**: Controls how the presentation scales on different screen sizes to prevent layout breaking.
+
+:::
 
 ## The YAML Header: Custom LMS Config
 ::: {.slide-subtitle-area}
@@ -166,6 +170,66 @@ Our custom template reads specific variables under `title-config` to automatical
 * **Core Brand Colors**: Sets the primary LMS red (`#D3362A`), card colors, and accent colors. These variables cascade down into the CSS.
 * **Typography Scale**: A unified system (`fs-tiny` to `fs-display-xxl`) ensuring font sizes remain mathematically consistent across headers, paragraphs, and footnotes without inline HTML styling.
 * **Title Slide Content**: The `title`, `logos`, `author` (with `presenter` toggles), and `affiliations` arrays dynamically assemble the first slide.
+
+
+
+## Configuration YAML (`title-config`) {.smaller}
+
+::: {.slide-subtitle-area}
+Comprehensive overview of template customization variables.
+:::
+
+::: {.columns .v-center .neg-mt-20}
+:::: {.column width="50%"}
+
+### Dimensions & Spacing {.text-2xl}
+
+| Variable | Effect |
+| --- | --- |
+| `sidebar-width` | Width of the sidebar. |
+| `title-image-size` | Size of the circular title image. |
+| `logo-height` | Height of the header logos. |
+| `content-logo-height` | Height of the logo on content slides. |
+
+### Primary Colors {.text-2xl}
+
+| Variable | Effect |
+| --- | --- |
+| `title-color` | Color for titles and primary text. |
+| `card-red` / `error-red` | Red accent (LMS) and error states. |
+| `card-blue` | Dark/blue accent for cards. |
+| `sidebar-color` | Sidebar background color. |
+| `orcid-color` | ORCID icon color. |
+| `bg-light` / `bg-light-red` | Background colors for cards. |
+| `success-green` | Validation color (e.g., checkmarks). |
+| 
+
+::::
+
+:::: {.column width="50%"}
+
+### Typography (Scale) {.text-2xl}
+
+| Variable | Effect |
+| --- | --- |
+| `title-size` / `subtitle-size` | Main title and subtitle sizes. |
+| `author-size` / `footer-size` | Author and footer text sizes. |
+| `header-size` | Size of `##` slide titles. |
+| `fs-subtitle-silde` | Slide subtitle size (`.slide-subtitle-area`). |
+| `fs-tiny` to `fs-p-lg` | Scale for body text and paragraphs. |
+| `fs-h6` to `fs-h1` | Standard heading scale. |
+| `fs-display-xs` to `xxl` | Scale for giant metrics (cards). |
+
+### Icons {.text-2xl}
+
+| Variable | Effect |
+| --- | --- |
+| `icon-sm` to `icon-xxl` | Size scale for `<iconify-icon>` elements. |
+| 
+
+::::
+
+:::
 
 
 # Part 2: Custom Components & Layouts
@@ -463,8 +527,41 @@ The main goal is **not** to create the most complex model, <br>but the **most us
 :::
 :::
 
+## Summary Utility Classes (`styles.css`) {.scrollable}
+::: {.slide-subtitle-area}
+Catalog of ready-to-use macros and CSS classes (Scroll down for more).
+:::
 
-# Part 3: Interactive Data Visualization
+::: {.columns .mt-20}
+:::: {.column width="100%"}
+
+### Margins and Spacing
+* **Top Margins (`margin-top`):** `.mt-0`, `.mt-20`, `.mt-40`, `.mt-50`, `.mt-60`, `.mt-100`, `.mt-150`.
+* **Bottom Margins (`margin-bottom`):** `.mb-15`, `.mb-20`, `.mb-30`, `.mb-40`.
+* **Negative Margins (Move element up):** `.neg-mt-5` to `.neg-mt-150`.
+
+### Widths (Fluid Grid)
+* **5% Increments:** From `.w-5` to `.w-100` (`.w-33` available for thirds).
+
+### Colors and Inline Typography
+* **Text Colors:** `[text]{.text-red}`, `[text]{.text-title}`, `[text]{.text-accent}`.
+* **Text Sizes:** `.text-lg`, `.text-xl`, `.text-2xl`, `.text-3xl`, `.text-4xl`.
+* **Weight and Height:** `.font-bold`, `.lh-14`, `.lh-15` (line-height).
+
+### Visual Components
+* **Data Cards:** `::: {.data-card .blue-card}` or `::: {.data-card .red-card}`.
+* **Alert Boxes:** `<div class="warning-box">` for limitations or assumptions.
+* **Flows and Processes:** `<div class="model-flow">` with `.flow-step` and `.flow-operator`.
+* **Evaluation Cards:** `<div class="eval-card">` with `.check` or `.cross` lists.
+
+### Flexbox & Alignment
+* **Centering:** `.flex-center` (flexbox), `.text-center` (text), `.h-center` (block).
+* **Flex Columns:** `.flex-col` (vertical stacking).
+
+::::
+:::
+
+# Part 3: Interactive Data Visualization {background="#fff200"}
 
 
 ## Pretty Code {auto-animate="true"}
@@ -626,6 +723,7 @@ m
 
 Turn presentations into applications with Observable JS. Use component layout to position inputs and outputs.
 
+
 ```{python}
 #| echo: false
 import pandas as pd
@@ -641,6 +739,9 @@ df = pd.DataFrame({
 ojs_define(actors = df)
 ```
 
+::: {.columns .v-center .h-center .w-90 .mt-150}
+:::: {.column width="35%"}
+
 ```{ojs}
 //| panel: sidebar
 // UI components must be in an {ojs} block, NOT {python}
@@ -649,12 +750,19 @@ viewof looksWeight = Inputs.range([-2, 2], { value: 0.7, step: 0.01, label: "loo
 viewof minimum = Inputs.range([-2, 2], { value: 1, step: 0.01, label: "min fame" })
 ```
 
+::::
+
+:::: {.column width="65%"}
+
 ```{ojs}
 //| panel: fill
 // Logic and visualization also go in an {ojs} block
 import { plotActors } from './actors.js';
 plotActors(actors, talentWeight, looksWeight, minimum)
 ```
+
+::::
+:::
 
 
 # Part 4: Native Reveal.js Capabilities
