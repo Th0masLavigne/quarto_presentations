@@ -88,6 +88,7 @@ title: "LMS Template Demo"
 subtitle: "A complete guide to custom features, layouts, and interactive components."
 title-image: "resources/images/skin_microstructure.png" 
 email: "your.email@polytechnique.edu"
+custom-funding: "Funding: Project #CCCCCCXZ"
 jupyter: python3
 
 logos:
@@ -106,11 +107,19 @@ author:
     attributes:       
       presenter: false
     affiliations:
-      - ref: 1
+      - ref: 2 
+      - ref: 3 
+      - ref: 4
 
 affiliations:
   - id: 1
-    name: "Laboratoire de Mécanique des Solides (LMS), École Polytechnique"
+    name: "Laboratoire de mécanique des solides, UMR 7649, CNRS, École polytechnique, Institut Polytechnique de Paris, Palaiseau, France"
+  - id: 2
+    name: "Affiliation 2"
+  - id: 3
+    name: "Affiliation 3"
+  - id: 4
+    name: "Affiliation 4"
 ---
 
 # Introduction to the Template
