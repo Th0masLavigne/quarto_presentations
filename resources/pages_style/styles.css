@@ -329,3 +329,48 @@ img.card-icon { max-height: 80px !important; width: auto; object-fit: contain; }
     color: var(--subtitle-accent); /* #B08D07 */
     font-weight: 600;
 }
+
+
+/* ==========================================================================
+   DYNAMIC SECTION TOC PROGRESS
+   ========================================================================== */
+.section-toc {
+  background: var(--bg-light, #F9F9F9);
+  border-left: 6px solid var(--border-main, #DDDDDD);
+  padding: 30px 40px;
+  border-radius: 0 12px 12px 0;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.section-toc .toc-item {
+  font-size: var(--fs-h4, 26pt);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--text-muted, #666666);
+  transition: all 0.3s ease;
+}
+
+.section-toc .toc-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Past sections (completed) */
+.section-toc .toc-item.past {
+  color: var(--text-main, #1A1A1A);
+  opacity: 0.6;
+}
+
+/* Current active section */
+.section-toc .toc-item.active {
+  color: var(--card-red, #D3362A);
+  font-weight: bold;
+  transform: translateX(10px); /* Slight indent for emphasis */
+}
+
+/* Icon sizing */
+.section-toc .toc-item iconify-icon {
+  font-size: var(--icon-md, 40px);
+}

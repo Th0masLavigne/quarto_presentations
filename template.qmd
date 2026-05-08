@@ -135,7 +135,9 @@ It builds upon Quarto and [Reveal.js](https://revealjs.com) to provide a unified
 - **Bypass** common Reveal.js limitations (like interactive Plotly figures).
 - **Leverage** native Reveal.js features (animations, code highlighting, scroll views).
 
-::: {.mt-40}
+**Note that each time you see a `div` in the template could used `:::` since they are equivalent.**
+
+::: {.mt-0}
 ```{=html}
 <div class="warning-box mt-0 w-100">
   <div class="warning-icon"><iconify-icon icon="mdi:clock-alert-outline"></iconify-icon></div>
@@ -148,6 +150,27 @@ It builds upon Quarto and [Reveal.js](https://revealjs.com) to provide a unified
 
 
 # Part 1: Configuration Guide
+
+::: {.section-toc .w-75 .h-center .mt-60}
+
+::: {.toc-item .active}
+<iconify-icon icon="mdi:play-circle"></iconify-icon> Part 1: Configuration Guide
+:::
+
+::: {.toc-item}
+<iconify-icon icon="mdi:circle-outline"></iconify-icon> Part 2: Custom Components & Layouts
+:::
+
+::: {.toc-item}
+<iconify-icon icon="mdi:circle-outline"></iconify-icon> Part 3: Interactive Data Visualization
+:::
+
+::: {.toc-item}
+<iconify-icon icon="mdi:circle-outline"></iconify-icon> Part 4: Native Reveal.js Capabilities
+:::
+
+:::
+
 
 ## The YAML Header: Core Reveal.js Options
 ::: {.slide-subtitle-area}
@@ -242,6 +265,28 @@ Comprehensive overview of template customization variables.
 
 
 # Part 2: Custom Components & Layouts
+
+
+::: {.section-toc .w-75 .h-center .mt-60}
+
+::: {.toc-item .past}
+<iconify-icon icon="mdi:check-circle"></iconify-icon> Part 1: Configuration Guide
+:::
+
+::: {.toc-item .active}
+<iconify-icon icon="mdi:play-circle"></iconify-icon> Part 2: Custom Components & Layouts
+:::
+
+::: {.toc-item}
+<iconify-icon icon="mdi:circle-outline"></iconify-icon> Part 3: Interactive Data Visualization
+:::
+
+::: {.toc-item}
+<iconify-icon icon="mdi:circle-outline"></iconify-icon> Part 4: Native Reveal.js Capabilities
+:::
+
+:::
+
 
 ## 1. Grid & Layout Utilities
 ::: {.slide-subtitle-area}
@@ -536,7 +581,51 @@ The main goal is **not** to create the most complex model, <br>but the **most us
 :::
 :::
 
-## Summary Utility Classes (`styles.css`) {.scrollable}
+## 9. Dynamic Section Progress {.text-xl}
+::: {.slide-subtitle-area}
+A Quarto-native component to track presentation advancement across major parts.
+:::
+
+::: {.columns .mt-20}
+:::: {.column width="50%"}
+### Visual Tracking
+Use the `.section-toc` container on your section divider slides. Because it uses pure Quarto `:::` syntax, your markdown remains clean and readable.
+
+**State Classes:**
+Change the class on each `.toc-item` to update the visual timeline:
+
+* **`.past`**: Grayed out text. Use the `mdi:check-circle` icon.
+* **`.active`**: Highlighted in red and indented. Use the `mdi:play-circle` icon.
+* **(Empty)**: Future state. Use the `mdi:circle-outline` icon.
+::::
+
+:::: {.column width="50%"}
+### Implementation
+Drop this directly under your `# Part X` headers.
+
+```markdown
+::: {.section-toc .w-90 .h-center}
+
+::: {.toc-item .past}
+<iconify-icon icon="mdi:check-circle"></iconify-icon> 
+Part 1: Configuration Guide
+:::
+
+::: {.toc-item .active}
+<iconify-icon icon="mdi:play-circle"></iconify-icon> 
+Part 2: Custom Components
+:::
+
+::: {.toc-item}
+<iconify-icon icon="mdi:circle-outline"></iconify-icon> 
+Part 3: Interactive Data
+:::
+:::
+```
+::::
+:::
+
+## Scrollable Summary Utility Classes (`styles.css`) {.scrollable}
 ::: {.slide-subtitle-area}
 Catalog of ready-to-use macros and CSS classes (Scroll down for more).
 :::
@@ -571,6 +660,28 @@ Catalog of ready-to-use macros and CSS classes (Scroll down for more).
 :::
 
 # Part 3: Interactive Data Visualization {background="#fff200"}
+
+
+::: {.section-toc .w-75 .h-center .mt-60}
+
+::: {.toc-item .past}
+<iconify-icon icon="mdi:check-circle"></iconify-icon> Part 1: Configuration Guide
+:::
+
+::: {.toc-item .past}
+<iconify-icon icon="mdi:check-circle"></iconify-icon> Part 2: Custom Components & Layouts
+:::
+
+::: {.toc-item .active}
+<iconify-icon icon="mdi:play-circle"></iconify-icon> Part 3: Interactive Data Visualization
+:::
+
+::: {.toc-item}
+<iconify-icon icon="mdi:circle-outline"></iconify-icon> Part 4: Native Reveal.js Capabilities
+:::
+
+:::
+
 
 
 ## Pretty Code {auto-animate="true"}
@@ -775,6 +886,28 @@ plotActors(actors, talentWeight, looksWeight, minimum)
 
 
 # Part 4: Native Reveal.js Capabilities
+
+::: {.section-toc .w-75 .h-center .mt-60}
+
+::: {.toc-item .past}
+<iconify-icon icon="mdi:check-circle"></iconify-icon> Part 1: Configuration Guide
+:::
+
+::: {.toc-item .past}
+<iconify-icon icon="mdi:check-circle"></iconify-icon> Part 2: Custom Components & Layouts
+:::
+
+::: {.toc-item .past}
+<iconify-icon icon="mdi:check-circle"></iconify-icon> Part 3: Interactive Data Visualization
+:::
+
+::: {.toc-item .active}
+<iconify-icon icon="mdi:play-circle"></iconify-icon> Part 4: Native Reveal.js Capabilities
+:::
+
+:::
+
+
 
 ## Code Highlighting & Execution
 
