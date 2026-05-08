@@ -2,6 +2,7 @@
 format:
   revealjs:
     logo: resources/logos/lms_alone.png
+    footer: "Footer text"
     chalkboard: true
     css: resources/pages_style/styles.css
     resources:
@@ -191,7 +192,7 @@ Before writing slides, you must configure the document. Here is what the core pa
 
 :::
 
-## The YAML Header: Custom LMS Config
+## The YAML Header: Custom LMS Config 
 ::: {.slide-subtitle-area}
 Understanding the custom `title-config` block.
 :::
@@ -205,7 +206,7 @@ Our custom template reads specific variables under `title-config` to automatical
 
 
 
-## Configuration YAML (`title-config`) {.smaller}
+## Configuration YAML (`title-config`) {.smaller footer=false}
 
 ::: {.slide-subtitle-area}
 Comprehensive overview of template customization variables.
@@ -1110,9 +1111,15 @@ Position images or other elements at precise locations
 
 ![](resources/images/kitten-300-200.jpeg){.absolute .fragment bottom="50" right="550" width="600"}
 
+
+::: {.aside}
+This is an aside
+:::
+
 ::: {.citation-footer}
 Learn more: [Absolute Position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position)
 :::
+
 
 ## Auto-Animate {auto-animate="true" auto-animate-easing="ease-in-out"}
 ::: {.slide-subtitle-area}

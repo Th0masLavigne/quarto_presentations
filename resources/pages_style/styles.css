@@ -3,6 +3,8 @@
    ========================================= */
 .reveal.hide-ui .slide-number,
 .reveal.hide-ui .slide-logo,
+.reveal.hide-ui .footer,
+.reveal:has(#title-slide.present) .footer,
 .reveal:has(#title-slide.present) .slide-number,
 .reveal:has(#title-slide.present) .slide-logo {
   display: none !important; opacity: 0 !important; visibility: hidden !important;
