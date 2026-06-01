@@ -9,8 +9,8 @@ format:
       - "resources/**"
     slide-number: c/t
     transition: fade
-    width: 1600       
-    height: 900       
+    width: 1920       
+    height: 1080       
     margin: 0.05
     min-scale: 0.2
     max-scale: 2.0
@@ -36,7 +36,8 @@ title-config:
   card-red: "#D3362A"            
   card-blue: "#000000"           
   sidebar-color: "#D3362A"       
-  orcid-color: "#A6CE39"         
+  orcid-color: "#A6CE39"  
+  circle-header: "#fff700"           
   
   # --- UI & Background Colors ---
   bg-light: "#F9F9F9"            

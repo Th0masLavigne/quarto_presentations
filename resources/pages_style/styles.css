@@ -61,7 +61,7 @@
    3. CONTENT SLIDE DECORATIONS
    ========================================= */
 .reveal .slide:not(.title-slide) h2 { color: var(--title-color); font-weight: bold; font-size: var(--header-size); margin-top: 75px !important; padding-left: 60px; position: relative; display: flex; align-items: center; }
-.reveal .slide:not(.title-slide) h2::before { content: ""; position: absolute; left: -50px; width: 30px; height: 60px; background-color: var(--card-red); border-radius: 0 30px 30px 0; top: 50%; transform: translateY(-50%); }
+.reveal .slide:not(.title-slide) h2::before { content: ""; position: absolute; left: -50px; width: 30px; height: 60px; background-color: var(--circle-header, #f0ff1c); border-radius: 0 30px 30px 0; top: 50%; transform: translateY(-50%); }
 .reveal .columns.v-center { display: flex !important; align-items: center; justify-content: space-around; }
 
 .data-card { border-radius: 15px; padding: 40px 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); height: 400px; display: flex; flex-direction: column; justify-content: center; background: white; position: relative; }
