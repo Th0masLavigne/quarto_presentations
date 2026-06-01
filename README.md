@@ -25,7 +25,11 @@ On recent versions of macOS, **PEP 668** security prevents the global installati
     ```
 3.  **Install dependencies:**
     ```bash
-    pip install jupyter pyyaml matplotlib numpy folium plotly
+    pip install jupyter pyyaml matplotlib numpy folium plotly pandas seaborn
+    ```
+Otherwise use the pyproject.toml
+    ```bash
+    pip install .
     ```
 
 > **Note:** Remember to reactivate the environment using `source .venv/bin/activate` every time you reopen your terminal. Or if you use VSCode and want something automated export the good variable in your rc file `export QUARTO_PYTHON="/Users/tlavigne/Documents/softwares/python_venv/venv/bin/python"`.
